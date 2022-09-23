@@ -50,8 +50,7 @@ city.get('/', async (req:Request, res:Response) => {
         fs.mkdir(path.resolve('./') + `/assets/thumbnail`);
       }
      await imgResize(imageLoc, name as string, width, height, newLocation);
-     console.log(imageLoc)
-     console.log(newLocation)
+
        
      res.sendFile(`${newLocation}/${name}_${width}_${height}.png`);
      
