@@ -32,9 +32,10 @@ describe('Testing the leads endpoint', () => {
 
   });
 
-  it('expect imgResize to return resized image', async()=>{
-        const result= await imgResize('D:/Programming/Udacity_FWD/Projects/Image_Api/assets/full/santamonica.jpg',
-        'santamonica',200,200,'D:/Programming/Udacity_FWD/Projects/Image_Api/assets/thumbnail');
+   it('expect imgResize to return resized image', async()=>{
+        const result= await imgResize(process.cwd()+'/assets/full/santamonica.jpg',
+        'santamonica',200,200, process.cwd()+'/assets/thumbnail');
         expect(result).toBeTruthy()
   });
+
 
